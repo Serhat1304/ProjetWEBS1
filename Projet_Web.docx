@@ -1,0 +1,34 @@
+Étude de faisabilité
+1. Étude du fonctionnement de NestJS
+NestJS est un framework de développement côté serveur pour Node.js, construit avec TypeScript. Il utilise les concepts de la programmation orientée objet, la programmation fonctionnelle et la programmation réactive. Voici une étude détaillée de son fonctionnement, son installation et son architecture modulaire.
+
+a. Fonctionnement de NestJS
+NestJS repose sur plusieurs concepts clés :
+
+Décorateurs : Utilisés pour attacher des métadonnées aux classes et fonctions afin de définir les routes, modules, etc.
+Modules : Ils sont des blocs de construction de l'application Nest. Un module est une classe annotée avec le décorateur @Module().
+Contrôleurs : Ils gèrent les requêtes entrantes et renvoient des réponses aux clients. Annotés avec @Controller().
+Services : Ils contiennent la logique métier et sont injectables via le décorateur @Injectable().
+
+b. Architecture modulaire de NestJS
+L'architecture de NestJS est fortement modulaire, permettant de diviser l'application en plusieurs modules réutilisables. Voici les principaux composants de cette architecture :
+
+Modules : Les modules permettent de regrouper les fonctionnalités liées. Par exemple, un module utilisateur peut contenir les contrôleurs, services, et autres éléments liés aux utilisateurs.
+Contrôleurs : Les contrôleurs définissent les routes et gèrent les requêtes HTTP.
+Services : Les services contiennent la logique métier et sont injectés dans les contrôleurs ou d'autres services.
+Middleware : Les middlewares sont des fonctions qui exécutent une logique avant que les requêtes ne soient traitées par les contrôleurs (optionnel).
+
+2. Analyse de l'intérêt d'utiliser GraphQL pour le développement d'une API
+GraphQL est un langage de requête pour les API et un runtime pour exécuter ces requêtes sur vos données existantes. Voici une analyse de ses avantages et inconvénients.
+
+a. Avantages de GraphQL
+Flexibilité des requêtes : GraphQL permet aux clients de spécifier exactement quelles données ils ont besoin, réduisant ainsi la surcharge des données renvoyées par le serveur.
+Une seule URL : Contrairement à REST où chaque ressource a une URL distincte, avec GraphQL, une seule URL est utilisée pour toutes les requêtes.
+Documentation intégrée : Les schémas GraphQL servent de documentation vivante et de point de départ pour les explorateurs de requêtes.
+Évolutivité : Il est plus facile d'ajouter de nouvelles fonctionnalités et champs sans casser les clients existants.
+b. Inconvénients de GraphQL
+Complexité de la mise en œuvre : La mise en place de GraphQL peut être plus complexe que REST, surtout pour les développeurs non familiers avec ce concept.
+Problèmes de performance : Les requêtes trop flexibles peuvent conduire à des requêtes très complexes, impactant potentiellement les performances du serveur.
+Sécurité : Une attention particulière doit être portée à la sécurité, notamment pour éviter les requêtes non optimales ou malveillantes.
+Overfetching et Underfetching : Bien que GraphQL vise à résoudre ces problèmes, une mauvaise implémentation peut toujours conduire à des requêtes inefficaces.
+En conclusion, NestJS est un framework puissant pour le développement backend en Node.js grâce à son architecture modulaire et sa flexibilité. GraphQL, quant à lui, offre une grande flexibilité et une meilleure gestion des données côté client, mais nécessite une gestion rigoureuse des performances et de la sécurité. Le choix entre REST et GraphQL dépendra des besoins spécifiques du projet et de l'expérience de l'équipe de développement.
